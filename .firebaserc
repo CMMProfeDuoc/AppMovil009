@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tiendamascotas-17f81"
+  },
+  "targets": {
+    "tiendamascotas-17f81": {
+      "hosting": {
+        "app": [
+          "tiendamascotas-17f81"
+        ]
+      }
+    }
+  }
+}
