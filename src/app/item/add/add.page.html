@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="item">
+    <ion-input type="text" placeHolder="nombre" formControlName="name"></ion-input>
+    <ion-input type="text" placeHolder="descripcion" formControlName="detail"></ion-input>
+  </form>
+  <ion-button (click)="addItem();"></ion-button>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item
+    *ngFor = "let item of items"
+    (click) = goTo(item.id)
+    >
+      <ion-label> {{item.name }}</ion-label>
+      <ion-avatar>
+        <img src={{item.imageURL}}>
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>
