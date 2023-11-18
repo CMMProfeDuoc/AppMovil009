@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="secondary">
-    <ion-title>item</ion-title>
+  <ion-toolbar>
+    <ion-title>Productos</ion-title>
+    <ion-buttons [collapse]="true" slot="end">
+      <ion-button (click)="goHome();">HOME</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

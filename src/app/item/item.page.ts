@@ -30,6 +30,10 @@ export class ItemPage implements OnInit {
     this.router.navigateByUrl('item/'+path);
   }
 
+  goHome (){
+    this.router.navigateByUrl('home');
+  }
+
  
 
 }
