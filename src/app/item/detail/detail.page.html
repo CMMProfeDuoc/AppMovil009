@@ -1,9 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>{{item.name}}</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-img src={{item.imageURL}}></ion-img>
+</ion-content>
+
+<ion-content>
+  <ion-label> ACTUALIZAR </ion-label>
+  <form [formGroup]="updateForm">
+    <ion-input type="text" placeHolder="nombre" formControlName="name"></ion-input>
+    <ion-input type="text" placeHolder="descripcion" formControlName="detail"></ion-input>
+  </form>
+  <ion-button (click)="updateItem();"> ACTUALIZAR </ion-button>
+</ion-content>
+
+<ion-content>
+  <ion-button
+  (click) = "deleteItem();"
+  color="danger">
+    <ion-icon name="trash-bin-outline"></ion-icon>
+  </ion-button>
 </ion-content>

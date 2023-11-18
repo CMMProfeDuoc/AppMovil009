@@ -36,4 +36,13 @@ export class ItemService {
       })
     };
   }
+
+  updateItem (id:string, updateData:any) {
+    //console.log("Actualizando, paso 2");
+    this.fileService.updateDocument(updateData, 'items', id);
+  }
+
+  deleteItem (id:string) {
+    this.fileService.deleteDocument('items',id);
+  }
 }

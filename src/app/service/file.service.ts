@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, addDoc, collection, doc, getDoc, getDocs } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, deleteDoc, doc, getDoc, getDocs, updateDoc } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +24,15 @@ export class FileService {
   getDocument (path:string, id:string){
     const docRef = doc(this.firestore,path,id);
     return getDoc(docRef);
+  }
+
+  updateDocument (updateData:any,path:string, id:string) {
+    const docRef = doc(this.firestore, path, id);
+    return updateDoc(docRef, updateData);
+  }
+
+  deleteDocument (path:string, id:string) {
+    const docRef = doc(this.firestore, path, id);
+    return deleteDoc(docRef);
   }
 }
